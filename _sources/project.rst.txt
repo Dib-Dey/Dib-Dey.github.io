@@ -1,0 +1,4 @@
+Documentation from Project.py
+==============================
+.. automodule:: project
+	:members:

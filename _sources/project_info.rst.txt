@@ -1,0 +1,4 @@
+Documentation from Project_info.py
+==============================
+.. automodule:: project_info
+	:members:

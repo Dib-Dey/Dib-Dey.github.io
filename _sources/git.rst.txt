@@ -1,0 +1,9 @@
+===========================================
+Git Documentation 
+===========================================
+Check whether a directory is linked with git or not 
+
+	>>> git remote -v
+	>>> #result
+	>>> origin  https://github.com/Dib-Dey/Dib-Dey.github.io.git (fetch)
+	>>> origin  https://github.com/Dib-Dey/Dib-Dey.github.io.git (push) 

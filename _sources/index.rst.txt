@@ -40,6 +40,14 @@ to do when module isn't recognized. Path to be added to sys
 	>>> sys.path.append(r"C:\deydocuments\coding")
 
 ===========================================
+Software helps	  
+===========================================
+.. toctree::
+   :maxdepth: 2
+
+   git.rst
+
+===========================================
 Solved Problem Statements  
 ===========================================
 .. toctree::

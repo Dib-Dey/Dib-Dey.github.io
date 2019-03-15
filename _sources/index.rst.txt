@@ -21,11 +21,10 @@ If you want to show docstring of individual function
 
 	>>> need to add :members: as shown in code.rst 
 
-Need to change the html theme:
+Need to change the html theme: `weblink <http://www.sphinx-doc.org/en/stable/theming.html>`_
 
 	>>> go to conf.py
 	>>> change the theme variable html_theme = 'classic'
-	>>> http://www.sphinx-doc.org/en/stable/theming.html
 
 Any good example of docstring manipulation:
 

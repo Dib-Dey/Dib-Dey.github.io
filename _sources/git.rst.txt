@@ -24,3 +24,8 @@ If you getting a 404 error, try the following:
 	>>> touch .noj\ekyll
 	>>> git add .nojekyll
 	>>> git commit -m "added .nojekyll"
+
+If you get error with origin address, remove and add origin again.
+
+	>>> git remote rm origin
+	>>> git remote add origin https://github.com/Dib-Dey/Dib-Dey.github.io.git 

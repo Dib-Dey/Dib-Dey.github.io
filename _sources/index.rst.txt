@@ -47,6 +47,14 @@ Software helps
    git.rst
 
 ===========================================
+Software Projects	  
+===========================================
+.. toctree::
+   :maxdepth: 2
+
+   project.rst
+
+===========================================
 Solved Problem Statements  
 ===========================================
 .. toctree::

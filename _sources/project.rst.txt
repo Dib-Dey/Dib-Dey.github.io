@@ -1,4 +1,5 @@
-Documentation from Project.py
-==============================
-.. automodule:: project
-	:members:
+======================================================
+Calculator using wxFormBuilder
+======================================================
+.. automodule:: calculator_gui.calculator
+   :members:

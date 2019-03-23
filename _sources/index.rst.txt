@@ -31,12 +31,12 @@ Any good example of docstring manipulation:
 	>>> https://pythonhosted.org/an_example_pypi_project/sphinx.html
 
 ===========================================
-Python tips
+Python Helps
 ===========================================
+.. toctree::
+   :maxdepth: 2
 
-to do when module isn't recognized. Path to be added to sys
-
-	>>> sys.path.append(r"C:\deydocuments\coding")
+   tips.rst
 
 ===========================================
 Software helps	  
@@ -61,3 +61,7 @@ Solved Problem Statements
    :maxdepth: 2
    
    code.rst
+
+===========================================
+Release Methods   
+===========================================

@@ -38,8 +38,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-Python_problems.minion_game">
-<span id="minion-game-problem"></span><h1>Minion Game Problem<a class="headerlink" href="#module-Python_problems.minion_game" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-pypo.minion_game">
+<span id="minion-game-problem"></span><h1>Minion Game Problem<a class="headerlink" href="#module-pypo.minion_game" title="Permalink to this headline">¶</a></h1>
 <p>Kevin and Stuart want to play the ‘The Minion Game’.</p>
 <p><strong>Game Rules</strong></p>
 <p>Both players are given the same string, .
@@ -62,8 +62,8 @@ Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
 </pre></div>
 </div>
 <dl class="function">
-<dt id="Python_problems.minion_game.smart_minion_game">
-<code class="descclassname">Python_problems.minion_game.</code><code class="descname">smart_minion_game</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#Python_problems.minion_game.smart_minion_game" title="Permalink to this definition">¶</a></dt>
+<dt id="pypo.minion_game.smart_minion_game">
+<code class="descclassname">pypo.minion_game.</code><code class="descname">smart_minion_game</code><span class="sig-paren">(</span><em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.minion_game.smart_minion_game" title="Permalink to this definition">¶</a></dt>
 <dd><div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">logic behind this method is when you begin from a specific letter, number of word you can create = length of the string  - position of the letter</p>
@@ -81,26 +81,18 @@ Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-Python_problems.utils">
-<span id="utility-functions"></span><h1>Utility Functions<a class="headerlink" href="#module-Python_problems.utils" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pypo.utils">
+<span id="utility-functions"></span><h1>Utility Functions<a class="headerlink" href="#module-pypo.utils" title="Permalink to this headline">¶</a></h1>
 <p>module having all utility functions</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Python_problems</span> <span class="k">import</span> <span class="n">utils</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pypo</span> <span class="k">import</span> <span class="n">utils</span>
 </pre></div>
 </div>
 <dl class="function">
-<dt id="Python_problems.utils.convert_path">
-<code class="descclassname">Python_problems.utils.</code><code class="descname">convert_path</code><span class="sig-paren">(</span><em>input_string=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Python_problems.utils.convert_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>convert window’s path to linux or vice versa
-:param input_string: string
-:return: converted_string</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="Python_problems.utils.copy_all_files_to_destination">
-<code class="descclassname">Python_problems.utils.</code><code class="descname">copy_all_files_to_destination</code><span class="sig-paren">(</span><em>source=''</em>, <em>destination=''</em><span class="sig-paren">)</span><a class="headerlink" href="#Python_problems.utils.copy_all_files_to_destination" title="Permalink to this definition">¶</a></dt>
+<dt id="pypo.utils.file_mover">
+<code class="descclassname">pypo.utils.</code><code class="descname">file_mover</code><span class="sig-paren">(</span><em>source=''</em>, <em>destination=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.utils.file_mover" title="Permalink to this definition">¶</a></dt>
 <dd><p>copy all files inside all directories in source directory and paste in destination directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Python_problems</span> <span class="k">import</span> <span class="n">utils</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">utils</span><span class="o">.</span><span class="n">copy_all_files_to_destination</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\ddey\Downloads\photos_and_videos&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pypo</span> <span class="k">import</span> <span class="n">utils</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">utils</span><span class="o">.</span><span class="n">file_mover</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\ddey\Downloads\photos_and_videos&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -120,6 +112,34 @@ Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
 </table>
 </dd></dl>
 
+<dl class="function">
+<dt id="pypo.utils.file_play">
+<code class="descclassname">pypo.utils.</code><code class="descname">file_play</code><span class="sig-paren">(</span><em>input_file=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.utils.file_play" title="Permalink to this definition">¶</a></dt>
+<dd><p>on-going project where you can get a file and massage it a way you want
+:param input_file: file
+:return: not decided yet</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pypo.utils.path_converter">
+<code class="descclassname">pypo.utils.</code><code class="descname">path_converter</code><span class="sig-paren">(</span><em>input_string=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.utils.path_converter" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts windows path to linux and vice versa</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">utils</span><span class="o">.</span><span class="n">path_converter</span><span class="p">(</span><span class="s2">&quot;/nfs/pdx/ddey/mbev/mve_softev&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># \nfs\pdx\ddey\mbev\mve_softev</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input_string</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">converted_path</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 
 
@@ -131,7 +151,7 @@ Here, ANA occurs twice in BANANA. Hence, Kevin will get 2 Points.</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Minion Game Problem</a></li>
-<li><a class="reference internal" href="#module-Python_problems.utils">Utility Functions</a></li>
+<li><a class="reference internal" href="#module-pypo.utils">Utility Functions</a></li>
 </ul>
 
   <h4>Previous topic</h4>

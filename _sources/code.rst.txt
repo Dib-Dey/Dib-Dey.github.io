@@ -1,11 +1,11 @@
 ======================================================
 Minion Game Problem 
 ======================================================
-.. automodule:: Python_problems.minion_game
+.. automodule:: pypo.minion_game
    :members:
 
 ======================================================
 Utility Functions
 ======================================================
-.. automodule:: Python_problems.utils
+.. automodule:: pypo.utils
    :members:

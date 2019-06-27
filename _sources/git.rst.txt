@@ -1,5 +1,5 @@
 ===========================================
-Git Documentation 
+Git commands 
 ===========================================
 Check whether a **directory is linked** with git or not 
 
@@ -23,7 +23,7 @@ remove a file from tracking not local untracked file (**not** delete completely)
 	>>> git rm --cached calculator_gui/gui.pyc
 
 ===========================================
-github setup
+Github Setup Method 
 ===========================================
 set up github repo for first time
 

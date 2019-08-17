@@ -1,0 +1,6 @@
+#Don't track content of these folders
+
+#compiled file type
+*.pyc
+*.exe
+*.com

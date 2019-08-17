@@ -87,6 +87,61 @@ If you getting a 404 error, try the following:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="svn-to-git">
+<h1>SVN to Git<a class="headerlink" href="#svn-to-git" title="Permalink to this headline">¶</a></h1>
+<p>Below steps need to be followed if one wants to convert their SVN repo to Git.</p>
+<p>step#1 (System):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Recommended</span> <span class="n">OS</span><span class="p">:</span> <span class="n">Unix</span>
+</pre></div>
+</div>
+<p>step#2 (System requirement):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; Setup ~/.itools – add these tool versions (tested working January 2019)
+&gt;&gt;&gt; P:subversion 1.7.2
+&gt;&gt;&gt; P:git 1.8.2
+&gt;&gt;&gt; Note: if .itools file doesn’t exist then make one writing these two lines
+</pre></div>
+</div>
+<p>step#3 (Extract SVN Committers):</p>
+<p>Get SVN committers from repo, convert to username/email for proper git commit information. Execute these commands (may take a while)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">svn</span> <span class="n">log</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">URL</span><span class="p">}</span> <span class="o">-</span><span class="n">q</span> <span class="o">&gt;</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Example</span><span class="p">:</span>  <span class="n">svn</span> <span class="n">log</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">-</span><span class="n">svn</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span> <span class="o">-</span><span class="n">q</span> <span class="o">&gt;</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Following is the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">awk</span> <span class="o">-</span><span class="n">F</span><span class="s2">&quot;|&quot;</span> <span class="s1">&#39;/^r/ {gsub (/ /, &quot;&quot;, $2 ); print$2&quot; = &lt;&quot;$2&quot;&gt;&quot;}&#39;</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="o">&gt;</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>You now have a list of all SVN commit authors and their username/email in ‘authors-transform.txt’</p>
+<p>step#4 (modification of authors-transform.txt)</p>
+<blockquote>
+<div><dl class="function">
+<dt id="pypo.utils.convert_user_email">
+<code class="descclassname">pypo.utils.</code><code class="descname">convert_user_email</code><span class="sig-paren">(</span><em>path=''</em>, <em>wpath=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.utils.convert_user_email" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert authors-transform.txt with IDs to a format with full name, email for better git history log visualization</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> – path of given file</li>
+<li><strong>wpath</strong> – path of saved new file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+<p>step #5 (Final conversion command):</p>
+<p>This step uses “git svn” to do most of the work of converting SVN to git.
+Execute this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">svn</span> <span class="n">clone</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">url</span><span class="p">}</span> <span class="o">-</span><span class="n">T</span> <span class="n">trunk</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span> <span class="o">-</span><span class="n">t</span> <span class="n">tags</span> <span class="o">-</span><span class="n">A</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Example</span> <span class="n">xommand</span> <span class="p">:</span> <span class="n">git</span> <span class="n">svn</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">-</span><span class="n">svn</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span> <span class="o">-</span><span class="n">T</span> <span class="n">trunk</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span><span class="o">/</span><span class="n">number_1</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span><span class="o">/</span><span class="n">dev</span> <span class="o">-</span><span class="n">t</span> <span class="n">tags</span> <span class="o">-</span><span class="n">A</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Please</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">following</span> <span class="n">link</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stackoverflow</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">54224050</span><span class="o">/</span><span class="n">svn</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">conversion</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">formation</span>
+</pre></div>
+</div>
+</div>
 
 
           </div>
@@ -98,6 +153,7 @@ If you getting a 404 error, try the following:</p>
   <ul>
 <li><a class="reference internal" href="#">Git commands</a></li>
 <li><a class="reference internal" href="#github-setup-method">Github Setup Method</a></li>
+<li><a class="reference internal" href="#svn-to-git">SVN to Git</a></li>
 </ul>
 
   <h4>Previous topic</h4>

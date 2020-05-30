@@ -1,18 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Git commands &#8212; Python Documentation 1.0 documentation</title>
+    <meta charset="utf-8" />
+    <title>Git Documentation &#8212; Python Documentation 1.0 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Calculator using wxFormBuilder" href="project.html" />
@@ -24,9 +25,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="project.html" title="Calculator using wxFormBuilder"
              accesskey="N">next</a> |</li>
@@ -42,10 +40,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="git-commands">
-<h1>Git commands<a class="headerlink" href="#git-commands" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="git-documentation">
+<h1>Git Documentation<a class="headerlink" href="#git-documentation" title="Permalink to this headline">¶</a></h1>
 <p>Check whether a <strong>directory is linked</strong> with git or not</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1">#result</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">origin</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
@@ -53,90 +51,66 @@
 </pre></div>
 </div>
 <p>If you get error with origin address, remove and add origin again(<strong>first time cloning only</strong>).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">rm</span> <span class="n">origin</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">rm</span> <span class="n">origin</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <p>check if a directory is <strong>git controlled</strong>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="n">parse</span> <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">inside</span><span class="o">-</span><span class="n">work</span><span class="o">-</span><span class="n">tree</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="n">parse</span> <span class="o">--</span><span class="ow">is</span><span class="o">-</span><span class="n">inside</span><span class="o">-</span><span class="n">work</span><span class="o">-</span><span class="n">tree</span>
 </pre></div>
 </div>
 <p>remove a file from tracking not local untracked file (<strong>not</strong> delete completely)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="n">calculator_gui</span><span class="o">/</span><span class="n">gui</span><span class="o">.</span><span class="n">pyc</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="n">calculator_gui</span><span class="o">/</span><span class="n">gui</span><span class="o">.</span><span class="n">pyc</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="github-setup-method">
-<h1>Github Setup Method<a class="headerlink" href="#github-setup-method" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="github-setup">
+<h1>Github setup<a class="headerlink" href="#github-setup" title="Permalink to this headline">¶</a></h1>
 <p>set up github repo for first time</p>
 <p>You can follow steps in following web:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pages</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pages</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>It will generate git repo. The address:<em>https://github.com/Dib-Dey/Dib-Dey.github.io.git</em>.  where sphinx <strong>build</strong> added.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#go inside the folder c:\deydocuments\coding\build</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1">#go inside the folder c:\deydocuments\coding\build</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">/</span><span class="n">Dib</span><span class="o">-</span><span class="n">Dey</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <p>Sphinx help for GitHub can be found in <a class="reference external" href="https://daler.github.io/sphinxdoc-test/includeme.html">Sphinx help</a>
 If you getting a 404 error, try the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">location</span> <span class="n">of</span> <span class="n">build</span><span class="o">&gt;</span> <span class="c1">#example - C:\deydocuments\coding\build</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">location</span> <span class="n">of</span> <span class="n">build</span><span class="o">&gt;</span> <span class="c1">#example - C:\deydocuments\coding\build</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">touch</span> <span class="o">.</span><span class="n">noj</span>\<span class="n">ekyll</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">nojekyll</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;added .nojekyll&quot;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="svn-to-git">
-<h1>SVN to Git<a class="headerlink" href="#svn-to-git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="convert-svn-repo-to-git">
+<h1>Convert SVN repo to Git<a class="headerlink" href="#convert-svn-repo-to-git" title="Permalink to this headline">¶</a></h1>
 <p>Below steps need to be followed if one wants to convert their SVN repo to Git.</p>
-<p>step#1 (System):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Recommended</span> <span class="n">OS</span><span class="p">:</span> <span class="n">Unix</span>
+<p>step:1 (System)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Recommended</span> <span class="n">OS</span><span class="p">:</span> <span class="n">Unix</span>
 </pre></div>
 </div>
-<p>step#2 (System requirement):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; Setup ~/.itools – add these tool versions (tested working January 2019)
+<p>Step:2 (System requirement)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; Setup ~/.itools – add these tool versions (tested working January 2019)
 &gt;&gt;&gt; P:subversion 1.7.2
 &gt;&gt;&gt; P:git 1.8.2
 &gt;&gt;&gt; Note: if .itools file doesn’t exist then make one writing these two lines
 </pre></div>
 </div>
-<p>step#3 (Extract SVN Committers):</p>
+<p>Step:3 (command)</p>
 <p>Get SVN committers from repo, convert to username/email for proper git commit information. Execute these commands (may take a while)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">svn</span> <span class="n">log</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">URL</span><span class="p">}</span> <span class="o">-</span><span class="n">q</span> <span class="o">&gt;</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">svn</span> <span class="n">log</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">URL</span><span class="p">}</span> <span class="o">-</span><span class="n">q</span> <span class="o">&gt;</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Example</span><span class="p">:</span>  <span class="n">svn</span> <span class="n">log</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">-</span><span class="n">svn</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span> <span class="o">-</span><span class="n">q</span> <span class="o">&gt;</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>Following is the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">awk</span> <span class="o">-</span><span class="n">F</span><span class="s2">&quot;|&quot;</span> <span class="s1">&#39;/^r/ {gsub (/ /, &quot;&quot;, $2 ); print$2&quot; = &lt;&quot;$2&quot;&gt;&quot;}&#39;</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="o">&gt;</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cat</span> <span class="n">svn</span><span class="o">-</span><span class="n">log</span><span class="o">.</span><span class="n">txt</span> <span class="o">|</span> <span class="n">awk</span> <span class="o">-</span><span class="sa">F</span><span class="s2">&quot;|&quot;</span> <span class="s1">&#39;/^r/ {gsub (/ /, &quot;&quot;, $2 ); print$2&quot; = &lt;&quot;$2&quot;&gt;&quot;}&#39;</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">u</span> <span class="o">&gt;</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>You now have a list of all SVN commit authors and their username/email in ‘authors-transform.txt’</p>
-<p>step#4 (modification of authors-transform.txt)</p>
-<blockquote>
-<div><dl class="function">
-<dt id="pypo.utils.convert_user_email">
-<code class="descclassname">pypo.utils.</code><code class="descname">convert_user_email</code><span class="sig-paren">(</span><em>path=''</em>, <em>wpath=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pypo.utils.convert_user_email" title="Permalink to this definition">¶</a></dt>
-<dd><p>convert authors-transform.txt with IDs to a format with full name, email for better git history log visualization</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>path</strong> – path of given file</li>
-<li><strong>wpath</strong> – path of saved new file</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div></blockquote>
-<p>step #5 (Final conversion command):</p>
-<p>This step uses “git svn” to do most of the work of converting SVN to git.
-Execute this command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">svn</span> <span class="n">clone</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">url</span><span class="p">}</span> <span class="o">-</span><span class="n">T</span> <span class="n">trunk</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span> <span class="o">-</span><span class="n">t</span> <span class="n">tags</span> <span class="o">-</span><span class="n">A</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
+<p>Step:4
+Below is the final conversion command:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">svn</span> <span class="n">clone</span> <span class="p">{</span><span class="n">your</span> <span class="n">SVN</span> <span class="n">repo</span> <span class="n">url</span><span class="p">}</span> <span class="o">-</span><span class="n">T</span> <span class="n">trunk</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span> <span class="o">-</span><span class="n">t</span> <span class="n">tags</span> <span class="o">-</span><span class="n">A</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Example</span> <span class="n">xommand</span> <span class="p">:</span> <span class="n">git</span> <span class="n">svn</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">example</span><span class="o">-</span><span class="n">svn</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">url</span> <span class="o">-</span><span class="n">T</span> <span class="n">trunk</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span><span class="o">/</span><span class="n">number_1</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span> <span class="o">-</span><span class="n">b</span> <span class="n">branches</span><span class="o">/</span><span class="n">dev</span> <span class="o">-</span><span class="n">t</span> <span class="n">tags</span> <span class="o">-</span><span class="n">A</span> <span class="n">authors</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Please</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">following</span> <span class="n">link</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stackoverflow</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">54224050</span><span class="o">/</span><span class="n">svn</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">git</span><span class="o">-</span><span class="n">conversion</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">formation</span>
 </pre></div>
@@ -149,11 +123,11 @@ Execute this command:</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Git commands</a></li>
-<li><a class="reference internal" href="#github-setup-method">Github Setup Method</a></li>
-<li><a class="reference internal" href="#svn-to-git">SVN to Git</a></li>
+<li><a class="reference internal" href="#">Git Documentation</a></li>
+<li><a class="reference internal" href="#github-setup">Github setup</a></li>
+<li><a class="reference internal" href="#convert-svn-repo-to-git">Convert SVN repo to Git</a></li>
 </ul>
 
   <h4>Previous topic</h4>
@@ -170,17 +144,15 @@ Execute this command:</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -192,9 +164,6 @@ Execute this command:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="project.html" title="Calculator using wxFormBuilder"
              >next</a> |</li>
         <li class="right" >
@@ -205,7 +174,7 @@ Execute this command:</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, D.Dey.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
     </div>
   </body>
 </html>

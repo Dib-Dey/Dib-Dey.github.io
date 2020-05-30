@@ -1,5 +1,5 @@
 ======================================================
 Calculator using wxFormBuilder
 ======================================================
-.. automodule:: calculator_gui.calculator
-   :members:
+
+`weblink <https://github.com/Dib-Dey/wx_calculator.git>`_

@@ -29,14 +29,6 @@ Software Projects
    project.rst
 
 ===========================================
-Solved Problem Statements  
-===========================================
-.. toctree::
-   :maxdepth: 2
-   
-   code.rst
-
-===========================================
 Sphinx BKM
 ===========================================
 
@@ -76,5 +68,3 @@ Below are steps to push the Sphinx documentations:
 
 Below are the steps to save the codes:
 	* code files need to be copied and move to ``C:\deydocuments\github\Python``
-
-

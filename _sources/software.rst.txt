@@ -78,6 +78,29 @@ Below is the final conversion command:
 	>>> Please refer to following link: https://stackoverflow.com/questions/54224050/svn-to-git-conversion-branch-formation
 
 ===========================================
+Python to exe
+===========================================
+Below are steps:
+
+	* ``pip install Pyinstaller`` 
+	* Get inside the package folder 
+	* Form a onefile entry to the package. e.g. ``Wx_CalC.py``
+	* Package your entire application into a single executable file ``--onefile``
+	* ``pyinstaller Wx_CalC.py --onefile``
+	* Generate two folders: ``Build and Dist``
+	* Inside Dist/ onefile exe can be found 
+
+===========================================
+Python Package
+===========================================
+steps followed:
+
+	* Generate Entry file to your package cli.py
+	* Test it and put it inside setup.py 
+	* ``python setup.py sdist bdist_wheel``
+	* It will generate ``dist`` which has ``.tar`` file for distribution 
+
+===========================================
 Publishing sphinx-generated docs on github
 ===========================================
 

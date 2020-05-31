@@ -116,6 +116,33 @@ Below is the final conversion command:</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="python-to-exe">
+<h1>Python to exe<a class="headerlink" href="#python-to-exe" title="Permalink to this headline">¶</a></h1>
+<p>Below are steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">Pyinstaller</span></code></p></li>
+<li><p>Get inside the package folder</p></li>
+<li><p>Form a onefile entry to the package. e.g. <code class="docutils literal notranslate"><span class="pre">Wx_CalC.py</span></code></p></li>
+<li><p>Package your entire application into a single executable file <code class="docutils literal notranslate"><span class="pre">--onefile</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyinstaller</span> <span class="pre">Wx_CalC.py</span> <span class="pre">--onefile</span></code></p></li>
+<li><p>Generate two folders: <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">and</span> <span class="pre">Dist</span></code></p></li>
+<li><p>Inside Dist/ onefile exe can be found</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="python-package">
+<h1>Python Package<a class="headerlink" href="#python-package" title="Permalink to this headline">¶</a></h1>
+<p>steps followed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Generate Entry file to your package cli.py</p></li>
+<li><p>Test it and put it inside setup.py</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span> <span class="pre">bdist_wheel</span></code></p></li>
+<li><p>It will generate <code class="docutils literal notranslate"><span class="pre">dist</span></code> which has <code class="docutils literal notranslate"><span class="pre">.tar</span></code> file for distribution</p></li>
+</ul>
+</div></blockquote>
+</div>
 <div class="section" id="publishing-sphinx-generated-docs-on-github">
 <h1>Publishing sphinx-generated docs on github<a class="headerlink" href="#publishing-sphinx-generated-docs-on-github" title="Permalink to this headline">¶</a></h1>
 <p>Key is to add <code class="docutils literal notranslate"><span class="pre">.nojekyll</span></code> to the build folder. When GitHub sees a <code class="docutils literal notranslate"><span class="pre">.nojekyll</span> <span class="pre">file</span></code>, it serves the root index.html file.</p>
@@ -136,6 +163,8 @@ Below is the final conversion command:</p>
 <li><a class="reference internal" href="#">Git Documentation</a></li>
 <li><a class="reference internal" href="#github-setup">Github setup</a></li>
 <li><a class="reference internal" href="#convert-svn-repo-to-git">Convert SVN repo to Git</a></li>
+<li><a class="reference internal" href="#python-to-exe">Python to exe</a></li>
+<li><a class="reference internal" href="#python-package">Python Package</a></li>
 <li><a class="reference internal" href="#publishing-sphinx-generated-docs-on-github">Publishing sphinx-generated docs on github</a></li>
 </ul>
 

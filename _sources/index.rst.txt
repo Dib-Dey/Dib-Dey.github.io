@@ -18,7 +18,7 @@ Software helps
 .. toctree::
    :maxdepth: 2
 
-   git.rst
+   software.rst
 
 ===========================================
 Software Projects	  
@@ -32,11 +32,13 @@ Software Projects
 Release Methods   
 ===========================================
 Below are steps to push the Sphinx documentations:	
-	* Both Doc and Build in same repo 
-		``cd <repo_dir>``
-		``>git pull``
-		``sphinx-build -b html . ..``
+	* go indisde following directory ``c:<Repo_dir>``
+	* ``>git pull``
+	* ``>cd doc``
+	* ``sphinx-build -b html . ..`` 
 	* After making new build, Please git add all files: ``git add *``
-		``git commit -m "put your comments"``
-		``git push``
+	* ``git commit -m "put your comments"``
+	* ``git push``
+	* if have issue with pushing , get out of ``Intel work vnc connection and try``
 	* once update is completed check `www.dib-dey.github.io <https://dib-dey.github.io/>`_   
+

@@ -76,3 +76,13 @@ Below is the final conversion command:
 	>>> git svn clone {your SVN repo url} -T trunk -b branches -t tags -A authors-transform.txt
 	>>> Example xommand : git svn clone https://example-svn-repo-url -T trunk -b branches/number_1 -b branches -b branches/dev -t tags -A authors-transform.txt
 	>>> Please refer to following link: https://stackoverflow.com/questions/54224050/svn-to-git-conversion-branch-formation
+
+===========================================
+Publishing sphinx-generated docs on github
+===========================================
+
+Key is to add ``.nojekyll`` to the build folder. When GitHub sees a ``.nojekyll file``, it serves the root index.html file. 
+
+More Info:
+
+	>>> https://daler.github.io/sphinxdoc-test/includeme.html

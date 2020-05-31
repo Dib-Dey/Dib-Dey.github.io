@@ -1,0 +1,13 @@
+*.pyc
+*.egg
+*.so
+*.swp
+
+##Dir*****************
+.cache/
+.idea
+.mypy_cache/
+.pytest_cache/
+.ropeproject/
+.vscode/
+.DS_Store

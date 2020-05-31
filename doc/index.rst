@@ -32,13 +32,11 @@ Software Projects
 Release Methods   
 ===========================================
 Below are steps to push the Sphinx documentations:	
-	* go indisde following directory ``c:\deydocuments\coding\build``
-	* ``>git pull``
+	* Both Doc and Build in same repo 
+		``cd <repo_dir>``
+		``>git pull``
+		``sphinx-build -b html . ..``
 	* After making new build, Please git add all files: ``git add *``
-	* ``git commit -m "put your comments"``
-	* ``git push``
-	* if have issue with pushing , get out of ``Intel work vnc connection and try``
+		``git commit -m "put your comments"``
+		``git push``
 	* once update is completed check `www.dib-dey.github.io <https://dib-dey.github.io/>`_   
-
-Below are the steps to save the codes:
-	* code files need to be copied and move to ``C:\deydocuments\github\Python``

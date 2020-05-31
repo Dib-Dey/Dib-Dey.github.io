@@ -1,3 +1,6 @@
+# SITE CONFIGURATION
+baseurl: ""
+url: https://dib-dey.github.io/
 title: Architect theme
 description: Architect is a theme for GitHub Pages.
 show_downloads: true

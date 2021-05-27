@@ -5,6 +5,14 @@ Dey's Coding Documentation
 Hi! This is Dibyendu Dey's github space where he has documented all solved problems, useful tips and best-known-methods. Sphinx documentation was created to track all solved problems and its potential use for future references. 
 
 ===========================================
+Linux Helps
+===========================================
+.. toctree::
+   :maxdepth: 2
+
+   linux.rst
+
+===========================================
 Python Helps
 ===========================================
 .. toctree::

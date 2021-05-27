@@ -18,3 +18,20 @@ How to check if a package is installed or not?
 
 	>>> pip show py2exe
 	>>> # example above shows about the package 
+
+How to set-up proxy for Python?
+
+	- Windows
+
+	>>> set http_proxy=http://proxy-page 
+	>>> set https_proxy=http://proxy-page
+
+	- Linux (csh)
+
+	>>> setenv http_proxy http://proxy-page
+	>>> setenv https_proxy http://proxy-page
+
+	- Linux (bash)
+
+	>>> export http_proxy http://proxy-page
+	>>> export https_proxy http://proxy-page

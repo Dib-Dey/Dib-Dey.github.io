@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Linux useful BKMs &#8212; Python Documentation 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python few useful BKMs" href="tips.html" />
+    <link rel="prev" title="Dey’s Coding Documentation" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tips.html" title="Python few useful BKMs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Dey’s Coding Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Documentation 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="linux-useful-bkms">
+<h1>Linux useful BKMs<a class="headerlink" href="#linux-useful-bkms" title="Permalink to this headline">¶</a></h1>
+<p>Find and grep:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.sv&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.svh&quot;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="n">highz</span> <span class="o">--</span><span class="n">color</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>List the files which have been found in find and grep:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.sv&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.svh&quot;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="n">highz</span> <span class="o">--</span><span class="n">color</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p>Use max depth in finding:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">iname</span> <span class="s2">&quot;*.json&quot;</span> <span class="o">-</span><span class="n">maxdepth</span> <span class="mi">5</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="o">-</span><span class="n">l</span> <span class="n">elab_opts</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">~/</span><span class="n">sublime</span>
+</pre></div>
+</div>
+<p>Get context during find:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">git</span> <span class="n">status</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="n">softev</span> <span class="o">-</span><span class="n">C</span> <span class="mi">2</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">n</span> <span class="o">--</span><span class="n">color</span><span class="o">=</span><span class="n">always</span>
+</pre></div>
+</div>
+<p>Grep multiple files:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="nb">type</span> <span class="n">d</span> \<span class="p">(</span> <span class="o">-</span><span class="n">path</span> <span class="o">./</span><span class="n">target</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">path</span> <span class="o">./</span><span class="n">src</span> \<span class="p">)</span> <span class="o">-</span><span class="n">prune</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.sv&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.svh&quot;</span>
+</pre></div>
+</div>
+<p>How to use find command?</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">iname</span> <span class="s2">&quot;IP743LPDDRGEN6DFISSEW*&quot;</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.sv&quot;</span>
+</pre></div>
+</div>
+<p>How to use grep efficiently?</p>
+<blockquote>
+<div><p>search only in current directory:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;name&quot;</span>
+</pre></div>
+</div>
+<p>search in specific folder</p>
+<p>&gt;&gt;grep -R “name” folder/*</p>
+<p>find all the .json file and search the word json in each of the files</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find</span> <span class="o">.</span> <span class="n">Ps</span> <span class="n">aux</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*.json&quot;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">grep</span> <span class="o">--</span><span class="n">color</span><span class="o">=</span><span class="n">always</span> <span class="s2">&quot;register&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Dey’s Coding Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tips.html"
+                        title="next chapter">Python few useful BKMs</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/linux.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tips.html" title="Python few useful BKMs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Dey’s Coding Documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Documentation 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, D.Dey.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

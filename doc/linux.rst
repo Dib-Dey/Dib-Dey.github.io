@@ -58,7 +58,7 @@ How to check usage summary?
 Install pycharm in linux:
 	
 	>>> download with FIreFox, unpacked with "tar -xvzf pycharm-community-2020.3.3.tar.gz"
-	>>> run "pycharm-community-2020.3.3/bin/pycharm.sh"
+	>>> run "pycharm-community-2020.3.3/bin/pycharm.sh" (from the bin subdirectory)
 
 Install Sublime:
 	
@@ -85,3 +85,14 @@ This example shows installation into the directory where the installer was downl
 	>>> ./install.sh --prefix=`readlink -f ../bcomp_install/`
 	>>> cd ..
 	>>> ./bcomp_install/bin/bcompare
+
+Install SystemVerilog syntax highlighting
+
+Download --> SystemVerilog.sublime-syntax.txt. Then copy it to this location (~ is your home directory)
+
+	>>> ~/.config/sublime-text-3/Packages/User
+
+It will then be available in the syntax menu at the very bottom right of the Sublime window, either on its own
+
+
+

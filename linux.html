@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Python few useful BKMs" href="tips.html" />
+    <link rel="next" title="Python few useful BKMs" href="python.html" />
     <link rel="prev" title="Dey’s Coding Documentation" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,7 +26,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="tips.html" title="Python few useful BKMs"
+          <a href="python.html" title="Python few useful BKMs"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Dey’s Coding Documentation"
@@ -86,7 +86,8 @@
 </pre></div>
 </div>
 <p>How to kill specific process?</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">ddey</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot; &quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot; &quot;</span> <span class="o">-</span><span class="n">f</span> <span class="mi">2</span><span class="o">|</span> <span class="n">xargs</span> <span class="n">kill</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ps</span> <span class="n">aux</span> <span class="p">(</span><span class="n">to</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">running</span> <span class="n">process</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ps</span> <span class="n">aux</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">ddey</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot; &quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot; &quot;</span> <span class="o">-</span><span class="n">f</span> <span class="mi">2</span><span class="o">|</span> <span class="n">xargs</span> <span class="n">kill</span>
 </pre></div>
 </div>
 <p>How to check usage summary?</p>
@@ -100,7 +101,24 @@
 </pre></div>
 </div>
 <p>Install Sublime:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">download</span><span class="p">:</span>
+<p>download: <a class="reference external" href="https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2">https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2</a></p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bunzip2</span> <span class="n">sublime_text_3_build_3126_x64</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">bz2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">sublime_text_3_build_3126_x64</span><span class="o">.</span><span class="n">tar</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="n">sublime_text_3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">./</span><span class="n">sublime_text</span>
+</pre></div>
+</div>
+<p>Install BeyondCompare:</p>
+<p>Download the BeyondCompare 3 Linux Release (in my experience BC4 does not work), as a TAR file:</p>
+<p><a class="reference external" href="http://www.scootersoftware.com/bcompare-3.3.13.18981.tar.gz">http://www.scootersoftware.com/bcompare-3.3.13.18981.tar.gz</a></p>
+<p>Extract the file, installing it into a directory of your choice.</p>
+<p>This example shows installation into the directory where the installer was downloaded and saved.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; tar -xvzf bcompare-3.3.13.18981.tar.gz
+&gt;&gt;&gt; mkdir bcomp_install
+&gt;&gt;&gt; cd bcompare-3.3.13.18981
+&gt;&gt;&gt; ./install.sh --prefix=`readlink -f ../bcomp_install/`
+&gt;&gt;&gt; cd ..
+&gt;&gt;&gt; ./bcomp_install/bin/bcompare
 </pre></div>
 </div>
 </div>
@@ -115,7 +133,7 @@
   <p class="topless"><a href="index.html"
                         title="previous chapter">Dey’s Coding Documentation</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="tips.html"
+  <p class="topless"><a href="python.html"
                         title="next chapter">Python few useful BKMs</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -145,7 +163,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="tips.html" title="Python few useful BKMs"
+          <a href="python.html" title="Python few useful BKMs"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Dey’s Coding Documentation"

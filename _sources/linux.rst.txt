@@ -46,7 +46,8 @@ How find the top 20 folders/files including the sub-directories, using largest d
 	>>> du -Sh * | sort -rh | head -20
 
 How to kill specific process?
-
+	
+	>>> ps aux (to list all running process)
 	>>> ps aux | grep ddey | tr -s " " | cut -d " " -f 2| xargs kill
 
 How to check usage summary?
@@ -61,4 +62,26 @@ Install pycharm in linux:
 
 Install Sublime:
 	
-	>>> download: 
+download: https://download.sublimetext.com/sublime_text_3_build_3126_x64.tar.bz2
+
+	>>> bunzip2 sublime_text_3_build_3126_x64.tar.bz2
+	>>> tar -xvf sublime_text_3_build_3126_x64.tar
+	>>> cd sublime_text_3
+	>>> ./sublime_text
+
+Install BeyondCompare:
+
+Download the BeyondCompare 3 Linux Release (in my experience BC4 does not work), as a TAR file:
+
+http://www.scootersoftware.com/bcompare-3.3.13.18981.tar.gz
+
+Extract the file, installing it into a directory of your choice.
+
+This example shows installation into the directory where the installer was downloaded and saved.
+
+	>>> tar -xvzf bcompare-3.3.13.18981.tar.gz
+	>>> mkdir bcomp_install
+	>>> cd bcompare-3.3.13.18981
+	>>> ./install.sh --prefix=`readlink -f ../bcomp_install/`
+	>>> cd ..
+	>>> ./bcomp_install/bin/bcompare

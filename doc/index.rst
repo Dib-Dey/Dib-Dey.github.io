@@ -18,7 +18,7 @@ Python Helps
 .. toctree::
    :maxdepth: 2
 
-   tips.rst
+   python.rst
 
 ===========================================
 Software helps	  

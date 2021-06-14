@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Python few useful BKMs &#8212; Python Documentation 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Git Documentation" href="software.html" />
+    <link rel="prev" title="Linux useful commands" href="linux.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="software.html" title="Git Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="linux.html" title="Linux useful commands"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Documentation 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-few-useful-bkms">
+<h1>Python few useful BKMs<a class="headerlink" href="#python-few-useful-bkms" title="Permalink to this headline">¶</a></h1>
+<p>to do when module isn’t recognized. Path to be added to sys</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\deydocuments\coding&quot;</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;# one can import any module inside the directory as above</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pypo</span>
+</pre></div>
+</div>
+<p>auto-completion using Tab, need to add following lines in __init__</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">rlcompleter</span><span class="o">,</span> <span class="nn">readline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s1">&#39;tab:complete&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>How to check if a package is installed or not?</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">show</span> <span class="n">py2exe</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># example above shows about the package</span>
+</pre></div>
+</div>
+<p>How to set-up proxy for Python?</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Windows</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span> <span class="n">http_proxy</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">set</span> <span class="n">https_proxy</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Linux (csh)</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">setenv</span> <span class="n">http_proxy</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">setenv</span> <span class="n">https_proxy</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Linux (bash)</p></li>
+</ul>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">export</span> <span class="n">http_proxy</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">export</span> <span class="n">https_proxy</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proxy</span><span class="o">-</span><span class="n">page</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="linux.html"
+                        title="previous chapter">Linux useful commands</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="software.html"
+                        title="next chapter">Git Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/python.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="software.html" title="Git Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="linux.html" title="Linux useful commands"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Python Documentation 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, D.Dey.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.2.
+    </div>
+  </body>
+</html>

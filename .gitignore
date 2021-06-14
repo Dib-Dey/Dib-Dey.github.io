@@ -11,3 +11,7 @@
 .ropeproject/
 .vscode/
 .DS_Store
+
+#sphinx specific
+.doctrees/*
+_sources/

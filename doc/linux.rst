@@ -1,5 +1,5 @@
 ===========================================
-Linux useful BKMs 
+Linux useful commands
 ===========================================
 
 Find and grep:
@@ -47,4 +47,18 @@ How find the top 20 folders/files including the sub-directories, using largest d
 
 How to kill specific process?
 
-	>>> ps aux | grep ddey | tr -s " " | cut -d " " -f 2| xargs kill 
+	>>> ps aux | grep ddey | tr -s " " | cut -d " " -f 2| xargs kill
+
+How to check usage summary?
+
+	>>> stodstatus storage-users --fields User,NumFiles,Usage,Age30,Age90,Age180,Age360 --fie " User, GB ( usage )" --sort -Age360,-Age180,-Age90,-Usage --number 100 "path=='/path_to_drive'"
+	>>> stodstatus storage-directories --fie "path,subdirectory::80,user,group,numfiles,GB(usage)" --sort-by usage "path=='/path_to_drive'" 
+
+Install pycharm in linux:
+	
+	>>> download with FIreFox, unpacked with "tar -xvzf pycharm-community-2020.3.3.tar.gz"
+	>>> run "pycharm-community-2020.3.3/bin/pycharm.sh"
+
+Install Sublime:
+	
+	>>> download: 

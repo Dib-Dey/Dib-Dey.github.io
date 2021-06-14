@@ -40,7 +40,7 @@ Software Projects
 Release Methods   
 ===========================================
 Below are steps to push the Sphinx documentations:	
-	* go indisde following directory ``c:<Repo_dir>``
+	* go indside the following directory ``c:<Repo_dir>``
 	* ``>git pull``
 	* ``>cd doc``
 	* ``sphinx-build -b html . ..`` 

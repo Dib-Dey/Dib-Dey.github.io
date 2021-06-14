@@ -1,9 +1,9 @@
 ===========================================
 Python few useful BKMs 
 ===========================================
+
 to do when module isn't recognized. Path to be added to sys
 
-	> Python
 	>>> import sys
 	>>> sys.path.append(r"C:\deydocuments\coding")
 	>>># one can import any module inside the directory as above 

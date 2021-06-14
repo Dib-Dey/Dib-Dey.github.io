@@ -13,5 +13,5 @@
 .DS_Store
 
 #sphinx specific
-.doctrees/*
-_sources/
+#.doctrees/*
+#_sources/
